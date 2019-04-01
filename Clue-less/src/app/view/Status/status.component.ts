@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {ServerService} from '../../services/server.service';
+import {ServerService} from '../../services/server.service'; 
 
 @Component({
   selector: 'app-status',

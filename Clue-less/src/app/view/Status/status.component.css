@@ -8,3 +8,10 @@
   max-width: 100%;
   max-height: 50%;
 }
+.form-control{
+  display: inline;
+  width: 80%;
+}
+.btn.btn-primary{
+  float:right;
+}
