@@ -9,12 +9,15 @@ import {ServerService} from '../../services/server.service';
 export class StatusComponent {
   constructor(private serverService: ServerService){};
   public inputInstruction: string ="";
- 
+  public message:string="";
   public messages: [] = [];
   
   send(){
-    var dasdas = this.serverService.sendMessage(this.inputInstruction); 
-    console.log(dasdas);
+    var dasdas = this.serverService.sendMessage(this.inputInstruction);
+    dasdas.subscribe(res => {
+      console.log(Object(res).username);
+      this.message = Object(res).username;
+    });
   }
   /* use this to retrieve messages from the server
   onRetrieve() {

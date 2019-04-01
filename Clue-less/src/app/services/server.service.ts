@@ -15,11 +15,10 @@ export class ServerService {
   }
 
   sendMessage(message: any) {
-    console.log("sendMessage"+message);
-      return this.http.get("http://127.0.0.1:8000/users/1/?format=json",message).subscribe(res => {
-      console.log(res)
-    });
- 
+    console.log("sendMessage"+message); 
+    let ob =  this.http.get("http://127.0.0.1:8000/users/1/?format=json")
+    return ob;
+
     //post is not support at this time
   }
 }

@@ -5,7 +5,7 @@
     <li *ngFor="let msg of messages">{{msg}}</li>
   </ul> 
     <div class="form-group">
-      <textarea class="status-window">
+      <textarea class="status-window" [(ngModel)]="message">
         User:xxx Action:xxx Time 19:21
       </textarea>
     </div> 
